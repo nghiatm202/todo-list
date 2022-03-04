@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(240, 239, 243);
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+#wrapper {
+  background-color: white;
+  padding: 20px;
+  width: 375px;
+  height: 520px;
+  border-radius: 8px;
+  overflow-y: scroll;
+}
+
+#wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.task-input {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 3px solid #0075ff;
+}
+
+.task-input i {
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.task-input input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 16px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.controls .filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 62%;
+}
+
+.controls .filters span {
+  cursor: pointer;
+}
+
+.controls .filters span.active {
+  color: #0075ff;
+}
+
+.controls .clear-btn {
+  padding: 6px 14px;
+  background-color: #0075ff;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.task-box {
+  padding-top: 22px;
+}
+
+.task-box .task {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.task-box .task:last-child {
+  margin-bottom: 0;
+}
+
+.task-box .task label {
+  display: flex;
+  align-items: center;
+}
+
+.task-box .task label input {
+  margin-right: 10px;
+}
+
+.task-box .task label p.checked {
+  text-decoration: line-through;
+}
+
+.task .settings {
+  cursor: pointer;
+  position: relative;
+}
+
+.settings .task-menu {
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  position: absolute;
+  right: 0px;
+  bottom: -56px;
+  z-index: 10;
+  transform: scale(0);
+  transform-origin: top right;
+  transition: transform 0.25s linear;
+}
+
+.settings:hover .task-menu {
+  transform: scale(1);
+}
+
+.task-menu li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 25px;
+  padding: 18px 15px;
+  border-radius: 5px;
+}
+
+.task-menu li:nth-child(1) {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.task-menu li:nth-child(2) {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.task-menu li:hover {
+  background-color: #f5f5f5;
+}
+
+.task-menu li i {
+  padding-right: 8px;
+}
